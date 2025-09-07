@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indra Jatra Festival</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f9f9f9;
+    }
+    header {
+      background: #b30000;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    nav {
+      background: #660000;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #fff;
+      padding: 14px 20px;
+      text-decoration: none;
+
+      display: block;
+    }
+    nav a:hover {
+      background: #990000;
+    }
+    .container {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #b30000;
+    }
+    footer {
+      background: #660000;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      max-width: 250px;
+      margin: 10px;
+      border-radius: 5px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    form {
+      margin-top: 15px;
+    }
+    input[type="text"] {
+      padding: 10px;
+      width: 250px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      padding: 10px 15px;
+      background: #b30000;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #990000;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    ul li {
+      background: #eee;
+      margin: 5px 0;
+      padding: 8px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Indra Jatra Festival</h1>
+    <p>Kathmandu’s Grand Festival of Living Traditions</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#history">History</a>
+    <a href="#celebration">Celebration</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#membership">Membership</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container">
+    <section id="home">
+      <h2>Welcome to Indra Jatra</h2>
+      <p>
+        Indra Jatra is one of the most significant festivals celebrated in Kathmandu, Nepal. 
+        Dedicated to Lord Indra, the god of rain and king of heaven, this festival blends 
+        religion, culture, and tradition in a grand celebration lasting eight days.
+      </p>
+    </section>
+
+    <section id="history">
+      <h2>History</h2>
+      <p>
+        The festival was started in the 10th century by King Gunakamadeva to honor Lord Indra. 
+        It also marks the beginning of the harvest season and is deeply tied to the cultural 
+        heritage of the Newar community of the Kathmandu Valley.
+      </p>
+    </section>
+
+    <section id="celebration">
+      <h2>How It Is Celebrated</h2>
+      <p>
+        Indra Jatra features masked dances, chariot processions, and the raising of the Lingo 
+        (a ceremonial pole). The Living Goddess, Kumari, is taken around Kathmandu in a 
+        beautifully decorated chariot, while people light oil lamps, perform traditional dances, 
+        and offer prayers.
+      </p>
+    </section>
+
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Indra_Jatra_in_Kathmandu.jpg" alt="Indra Jatra celebration">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Indra_Jatra_Pole.jpg" alt="Lingo pole Indra Jatra">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Kumari_Jatra.jpg" alt="Kumari Chariot">
+      </div>
+    </section>
+
+    <section id="membership">
+      <h2>Community Membership</h2>
+      <p>Join the Newari community celebrating Indra Jatra! Add your name below:</p>
+      <form id="memberForm">
+        <input type="text" id="memberName" placeholder="Enter your name" required>
+        <button type="submit">Join</button>
+      </form>
+      <h3>Our Members:</h3>
+      <ul id="memberList"></ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>If you’d like to know more about Indra Jatra, please reach out:</p>
+      <p>Email: info@indrajatra.org</p>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Indra Jatra Information Website | Made with ❤️ in Nepal</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById("memberForm");
+    const memberList = document.getElementById("memberList");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const nameInput = document.getElementById("memberName");
+      const name = nameInput.value.trim();
+      if(name) {
+        const li = document.createElement("li");
+        li.textContent = name;
+        memberList.appendChild(li);
+        nameInput.value = "";
+      }
+    });
+  </script>
+</body>
+</html>
